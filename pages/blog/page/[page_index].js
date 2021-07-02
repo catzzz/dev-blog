@@ -10,6 +10,7 @@ import Post from '@/components/Post'
 
 import {sortByDate} from '@/utils/index'
 import { POSTS_PER_PAGE } from "@/config/index";
+import Pagination from "@/components/Pagination";
 
 export default function BlogPage({posts,numPages,currentPage}) {
   return (
@@ -20,7 +21,7 @@ export default function BlogPage({posts,numPages,currentPage}) {
           <Post key={index} post={post} />
         )}
       </div>
-
+      <Pagination currentPage={currentPage} numPages={numPages}/>
     </Layout>
   );
 }
