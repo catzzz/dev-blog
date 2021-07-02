@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import Layout from '../components/Layout'
 export default function HomePage() {
   return (
-    <div className='bg-blue-500'>
+    <Layout>
       <h1>Homepage</h1>
-    </div>
+    </Layout>
   )
 }
