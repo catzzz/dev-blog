@@ -10,10 +10,12 @@ export default function Layout({ title, children, keywords, description }) {
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
       </Head>
-      <Header />
-      <Search />
-      <main className="container mx-auto ">{children}</main>
-      <Footer />
+      <div className="flex flex-col h-screen justify-between">
+        <Header />
+        <Search />
+        <main className="container mx-auto flex-grow">{children}</main>
+        <Footer class="h-10"/>
+      </div>
     </div>
   );
 }
